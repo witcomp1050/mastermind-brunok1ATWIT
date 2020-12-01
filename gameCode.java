@@ -53,11 +53,7 @@ public class gameCode{
                 }
             }
         }
-        for(int j = 0;j<feedback.length;j++)
-        {
-            System.out.print(feedback[j] + " ");
-        }
-        System.out.println();
+        
         for (int i = 0; i < feedback.length; i++) {
             for (int j = i + 1; j < feedback.length; j++) {
                 int tmp = -2;

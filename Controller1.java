@@ -219,7 +219,6 @@ public class Controller1 extends Application {
                 guess += 7;
             }
             else guess += l;
-            System.out.println(guess);
             int[] feedback = game.checkCombo(codeBreak, guess);
                 if (feedback[0] == 0) {
                     f1.setFill(Paint.valueOf("WHITE"));
@@ -295,7 +294,6 @@ public class Controller1 extends Application {
             rectangle.setId(String.valueOf(count) + "counts");
             cNextBox.getChildren().add(rectangle);
         }
-        System.out.println(cNextBox.getChildren());
         cNextBox.setSpacing(3.5);
         cNextBox.setLayoutX(cBox.getLayoutX());
         cNextBox.setLayoutY(cBox.getLayoutY() + 10);
