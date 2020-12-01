@@ -197,6 +197,19 @@ public class Controller1 extends Application {
             newGameButton.setOpacity(1);
             winLostText.setText(loseTest);
             checkButton.setDisable(true);
+            System.out.println(codeBreak.charAt(0)-49);
+            if(allowBlanks == false) {
+                c1.setFill(Paint.valueOf(clr[codeBreak.charAt(0) - 49]));
+                c2.setFill(Paint.valueOf(clr[codeBreak.charAt(1) - 49]));
+                c3.setFill(Paint.valueOf(clr[codeBreak.charAt(2) - 49]));
+                c4.setFill(Paint.valueOf(clr[codeBreak.charAt(3) - 49]));
+            }
+            else if(allowBlanks == true) {
+                c1.setFill(Paint.valueOf(clrb[codeBreak.charAt(0) - 49]));
+                c2.setFill(Paint.valueOf(clrb[codeBreak.charAt(1) - 49]));
+                c3.setFill(Paint.valueOf(clrb[codeBreak.charAt(2) - 49]));
+                c4.setFill(Paint.valueOf(clrb[codeBreak.charAt(3) - 49]));
+            }
             c1.setDisable(true);
             c2.setDisable(true);
             c3.setDisable(true);
@@ -365,12 +378,12 @@ public class Controller1 extends Application {
     public void setBlank(ActionEvent actionEvent) throws ConfigurationException {
         Button button = (Button) actionEvent.getSource();
         if(button.getText().equals("True")){
-            config.setDupe(true);
+            config.setBlank(true);
             trueBlank.setDisable(true);
             falseBlank.setDisable(false);
         }
         else if(button.getText().equals("False")){
-            config.setDupe(false);
+            config.setBlank(false);
             trueBlank.setDisable(false);
             falseBlank.setDisable(true);
         }
