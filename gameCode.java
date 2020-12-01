@@ -25,6 +25,7 @@ public class gameCode{
     }
 
     private static void initList(boolean allowBlanks){
+        arr.removeAll(arr);
         arr.add("1");
         arr.add("2");
         arr.add("3");
@@ -36,24 +37,26 @@ public class gameCode{
     }
 
     public int[] checkCombo(String gameCode, String userCode){
+        System.out.println("Input: " + userCode);
         int[] feedback = {-1,-1,-1,-1};
         char[] gameCodeArr = codeToArray(gameCode);
+        for(int i = 0;i< gameCode.length();i++) {
+            for (int k = 0; k < gameCode.length(); k++) {
+                if (userCode.charAt(i) == gameCodeArr[k]) {
+                    feedback[i] = 0;
+                    //gameCodeArr[k] = 'a';
+                    continue;
+                }
+            }
+        }
         for(int i = 0;i< gameCode.length();i++){
             if(userCode.charAt(i) == gameCodeArr[i]){
                 feedback[i] = 1;
                 gameCodeArr[i] = 'a';
             }
             else{
-                for(int k = 0; k < gameCode.length();k++){
-                    if(userCode.charAt(i) == gameCodeArr[k]){
-                        feedback[i] = 0;
-                        gameCodeArr[k] = 'a';
-                        break;
-                    }
-                }
             }
         }
-        
         for (int i = 0; i < feedback.length; i++) {
             for (int j = i + 1; j < feedback.length; j++) {
                 int tmp = -2;

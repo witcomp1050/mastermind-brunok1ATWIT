@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox fx:id="mainWindow" prefHeight="640.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wit.comp1050.Controller1">
+<VBox fx:id="mainWindow" alignment="CENTER" prefHeight="640.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wit.comp1050.Controller1">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -23,15 +23,23 @@
             <MenuItem mnemonicParsing="false" onAction="#openPref" text="Preferences…" />
           </items>
         </Menu>
-        <Menu fx:id="helpButton" mnemonicParsing="false" text="Help">
-          <items>
-            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
-          </items>
-        </Menu>
       </menus>
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00997e" height="614.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="640.0" />
+               </children>
+            </HBox>
+            <HBox fx:id="fBox" alignment="CENTER" layoutX="333.0" layoutY="160.0" opacity="0.0" prefHeight="0.0" prefWidth="21.0" spacing="5.0">
+               <children>
+                  <Rectangle fx:id="f1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+                  <Rectangle fx:id="f2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+                  <Rectangle fx:id="f3" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+                  <Rectangle fx:id="f4" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+               </children>
+            </HBox>
             <HBox alignment="CENTER" layoutX="160.0" layoutY="14.0" prefHeight="46.0" prefWidth="154.0">
                <children>
                   <Circle fx:id="c1" onMouseClicked="#cChange" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
@@ -49,7 +57,7 @@
                   <Font name="Comic Sans MS" size="27.0" />
                </font>
             </Label>
-            <HBox fx:id="cBox" alignment="CENTER" layoutX="160.0" layoutY="141.0" opacity="0.0" prefHeight="46.0" prefWidth="115.0" spacing="5.0">
+            <HBox fx:id="cBox" alignment="CENTER" layoutX="193.0" layoutY="149.0" opacity="0.0" prefHeight="46.0" prefWidth="115.0" spacing="5.0">
                <children>
                   <Circle fx:id="c11" onMouseClicked="#cChange" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                   <Circle fx:id="c21" onMouseClicked="#cChange2" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
@@ -76,14 +84,7 @@
                   <Font name="Comic Sans MS" size="27.0" />
                </font>
             </Text>
-            <HBox fx:id="fBox" alignment="CENTER" layoutX="300.0" layoutY="152.0" opacity="0.0" prefHeight="0.0" prefWidth="21.0" spacing="5.0">
-               <children>
-                  <Rectangle fx:id="f1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
-                  <Rectangle fx:id="f2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
-                  <Rectangle fx:id="f3" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
-                  <Rectangle fx:id="f4" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
-               </children>
-            </HBox>
+            <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#009b00" height="455.0" layoutX="156.0" layoutY="140.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="328.0" />
       </children>
     </AnchorPane>
   </children>

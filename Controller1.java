@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -323,7 +324,12 @@ public class Controller1 extends Application {
         game.setTitle("MasterMind");
         game.setScene(new Scene(root, 640, 640));
         game.show();
+        game.setResizable(false);
+        game.getIcons().add(new Image("edu/wit/comp1050/mmind.png"));
         c = config.codePegRows();
+        guessLength = config.codeSize();
+        allowRepeat = config.dupsAllowedInCode();
+        allowBlanks = config.blanksAllowedInCode();
         codeBreak = game2.genCode(guessLength, allowRepeat, allowBlanks);
         System.out.println("Generated Code: " + codeBreak);
     }
@@ -336,6 +342,8 @@ public class Controller1 extends Application {
         pref.setTitle("Preferences");
         pref.setScene(new Scene(root,600,400));
         pref.show();
+        pref.getIcons().add(new Image("edu/wit/comp1050/mmind.png"));
+        pref.setResizable(false);
 
     }
 
@@ -394,6 +402,8 @@ public class Controller1 extends Application {
         primaryStage.setTitle("MasterMind");
         primaryStage.setScene(new Scene(root, 640, 640));
         primaryStage.show();
+        primaryStage.setResizable(false);
+        primaryStage.getIcons().add(new Image("edu/wit/comp1050/mmind.png"));
     }
 
     public static void main(String[] args) throws ConfigurationException {
